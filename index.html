@@ -56,6 +56,18 @@
   </head>
   <body class="bg-darker-green flex items-center justify-center text-slate-900">
 
+    <div id="background-image" class="grid place-items-center h-screen align-middle">
+      <div id="text-body" class="rounded-xl backdrop-blur-sm bg-slate-300/30 p-8 grid gap-4 grid-flow-row md:grid-flow-col text-xs sm:text-sm md:text-lg lg:text-lg xl:text-3xl">
+        <div class="grid grid-flow-row gap-4">
+          <h1 id="title" class="font-extrabold italic text-dark-brown text-xl xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl" contenteditable="true">🎄🎄 Merry Christmas! 🎄🎄</h1>
+            <p id="abovetext" class="text-center text-dark-brown sm:space-x-4 md:space-x-8 md:text-xl slg:space-x-8 lg:text-2xl xl:space-x-12 xl:text-3xl 2xl:space-x-20">Enter super secret passcode:</p>
+            <!-- <p id="guessChances" class="text-center text-3xl"></p> -->
+            <input class= "bg-transparent text-dark-brown placeholder-dark-brown placeholder-text-center border-dashed border-4 border-dark-red hover:border-dotted" classtype="text" id="pwd" placeholder=" input here">
+            <button class="bg-dark-green rounded-xl p-2 font-extrabold text-darker-green italic text-4xl" onclick="goButton()" id="dottedb">Go........</button>
+        </div>
+      </div>
+    </div>
+
     <script>
       let url = new URL(window.location.href)
       let params = new URLSearchParams(url.search)
@@ -69,19 +81,6 @@
       }
       console.log("ran code")
     </script>
-
-
-    <div id="background-image" class="grid place-items-center h-screen align-middle">
-      <div id="text-body" class="rounded-xl backdrop-blur-sm bg-slate-300/30 p-8 grid gap-4 grid-flow-row md:grid-flow-col text-xs sm:text-sm md:text-lg lg:text-lg xl:text-3xl">
-        <div class="grid grid-flow-row gap-4">
-          <h1 id="title" class="font-extrabold italic text-dark-brown text-xl xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl" contenteditable="true">🎄🎄 Merry Christmas! 🎄🎄</h1>
-            <p id="abovetext" class="text-center text-dark-brown sm:space-x-4 md:space-x-8 md:text-xl slg:space-x-8 lg:text-2xl xl:space-x-12 xl:text-3xl 2xl:space-x-20">Enter super secret passcode:</p>
-            <!-- <p id="guessChances" class="text-center text-3xl"></p> -->
-            <input class= "bg-transparent text-dark-brown placeholder-dark-brown placeholder-text-center border-dashed border-4 border-dark-red hover:border-dotted" classtype="text" id="pwd" placeholder=" input here">
-            <button class="bg-dark-green rounded-xl p-2 font-extrabold text-darker-green italic text-4xl" onclick="goButton()" id="dottedb">Go........</button>
-        </div>
-      </div>
-    </div>
 
   </body>
 </html>
