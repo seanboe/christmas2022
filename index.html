@@ -58,7 +58,8 @@
 
     <script>
       let params = new URLSearchParams(window.location.href.search)
-      let error = params.get('error')
+      console.log(params)
+      let error = params.get("error")
       console.log(error)
       if (error == 1) {
         document.getElementById("abovetext").innerHTML = '😤invalid... 😤😤';
