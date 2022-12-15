@@ -58,16 +58,6 @@
   </head>
   <body class="bg-darker-green flex items-center justify-center text-slate-900">
 
-    <script>
-      let params = new URLSearchParams(window.location.href.search)
-      let error = params.get('error')
-      if (error == 1) {
-        document.getElementById("abovetext").innerHTML = '😤invalid... 😤😤';
-        document.getElementById("pwd").value = '';
-      }
-    </script>
-
-
     <div id="background-image" class="grid place-items-center h-screen align-middle">
       <div id="text-body" class="rounded-xl backdrop-blur-sm bg-slate-300/30 p-8 grid gap-4 grid-flow-row md:grid-flow-col text-xs sm:text-sm md:text-lg lg:text-lg xl:text-3xl">
         <div class="grid grid-flow-row gap-4">
