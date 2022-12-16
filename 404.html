@@ -1,6 +1,40 @@
-<script>
-  // window.location.href = "index.html?error=1";
-  console.log("404")
-  window.location.href = "index.html?error=1";
+<html lang="en">
+  <head>
+    <script src="https://cdn.tailwindcss.com"></script>
 
-</script>
+    <script>
+      tailwind.config = {
+        theme: {
+          backgroundImage: {
+            // 'confetti': "url('../src/images/confetti.gif')"
+            'confetti': "url('../images/confetti.gif')"
+          },
+
+          extend: {
+            colors: {
+              'darker-green': '#083424',
+              'dark-green': '#28560c',
+              'light-green': '#146b3a',
+              'dark-red': '#c9060a',
+              'light-red': '#fa1b34',
+              'light-brown': '#a85c14',
+              'dark-brown': '#50241c',
+              'transparent': 'transparent'
+            }
+
+          }
+        }
+      }
+    </script>
+
+  </head>
+</html>
+
+<body class="bg-darker-green">
+  <script>
+    // window.location.href = "index.html?error=1";
+    console.log("404")
+    window.location.href = "index.html?error=1";
+  
+  </script>
+</body>
