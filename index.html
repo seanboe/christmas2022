@@ -40,6 +40,22 @@
       }
     </script>
 
+  <!-- <iframe src="audio/source.mp3" allow="autoplay" style="display:none" id="iframeAudio"></iframe>  -->
+
+  <!-- <script>
+      var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+      if (!isChrome){
+        $('#iframeAudio').remove()
+      }
+      else {
+        $('#playAudio').remove() // just to make sure that it will not have 2x audio in the background 
+      }
+  </script> -->
+
+  <!-- <script>
+    document.getElementById('music').play();
+  </script> -->
+
   </head>
   <body class="bg-darker-green flex items-center justify-center text-slate-900 font-mono">
 
@@ -87,24 +103,15 @@
             }, x * (time / periods))
           }
 
-          // setTimeout(function(){ window.location.href = "/" + submission + ".html"}, 1000);
+          console.log("pwd accepted")
+
         }
       }
-      
-      // httpGet('https://script.google.com/macros/s/AKfycbxNgzXEuz5QdowAo_LKZ_hKaw4Ox_P_JHGKarzilxAwHBeZHzrNmUntht2_tiZac-XC/exec?gid=0')
-      console.log("df")
-
-      // function httpGet(theUrl)
-      // {
-      //     var xmlHttp = new XMLHttpRequest();
-      //     xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
-      //     xmlHttp.send( JSON.stringify({
-      //       value: 5
-      //     }));
-      //     return xmlHttp.responseText;
-      // }
+    
 
     </script>
+
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/Sht5Nenk3Dg?&autoplay=1&controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 
   </body>
 </html>
