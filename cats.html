@@ -11,6 +11,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/9f3da960b8.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
 
 
     <title>🎄Merry Christmas🎄</title>
@@ -71,12 +72,53 @@
             Ok I’m not confused were gonna fucking slay at mit!
 
           </p>
-          <footer>
-            <p id="abovetext" class="text-right italic text-dark-brown text-lg md:text-xl lg:text-2xl xl:text-3xl">-Sean</p>
-          </footer>
+            <button class="hover:font-extrabold" onclick="playInput()" id=""><p id="abovetext" class="text-right italic text-dark-brown text-lg md:text-xl lg:text-2xl xl:text-3xl">-Sean</p></button>
         </div>
       </div>
     </div>
+
+    <script>
+      let jsConfetti = new JSConfetti();
+
+      function playConfetti(emojis) {
+        jsConfetti.addConfetti({
+          emojis: emojis,
+          emojiSize: 100,
+          confettiNumber: 30,
+          confettiColors: [
+            "#ff0a54",
+            "#ff477e",
+            "#ff7096",
+            "#ff85a1",
+            "#fbb1bd",
+            "#f9bec7",
+          ],
+        });
+      };
+
+      function playInput() {
+        input = document.getElementById("title").innerHTML;
+        if (input != "🎄🎄 Merry Christmas! 🎄🎄") {
+
+          let emojis = [];
+          let counter = 0;
+          let completeCharacter = "";
+          for (let x = 0; x < input.length; x++) {
+            completeCharacter += input.substring(x, x + 1);
+            if (x % 2 == 1) {
+              emojis[counter] = completeCharacter;
+              completeCharacter = "";
+              counter++;
+            }
+          }
+          console.log(emojis);
+          playConfetti(emojis);
+        }
+      }
+
+    </script>
+
+    <script>playConfetti(["🎄", "🎅🏼", "🎁"])</script>
 
   </body>
 </html>
