@@ -1,0 +1,7 @@
+---
+music: /music/feliz-navidad.mp3
+---
+
+Hi Coach Alex! I just want to thank you for allowing me to join Team Inspiration and providing support throughout the season. Prior 
+to joining the team, I had a fairly poor perception of most robotics teams - the one at school is unmotivated and ineffecient. Joining 
+the team both taught me a lot and was a lot of fun, and I'm really excited for the Robosub competition!

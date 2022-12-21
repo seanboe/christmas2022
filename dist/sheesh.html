@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">  -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/9f3da960b8.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+
+
+    <title>🎄Merry Christmas🎁</title>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          backgroundImage: {
+            // 'confetti': "url('../src/images/confetti.gif')"
+            'background-confetti': "url('confetti.gif')"
+          },
+
+          extend: {
+            colors: {
+              'darker-green': '#046341',
+              'light-green': '#108242',
+              'dark-red': '#f50c11',
+              'light-red': '#fa1b34',
+              'light-brown': '#a85c14',
+              'dark-brown': '#50241c',
+              'transparent': 'transparent'
+            }
+
+          }
+        }
+      }
+    </script>
+
+    <audio id="music" autoplay loop src="/music/feliz-navidad.mp3" type="audio/mp3"></audio>
+
+  </head>
+  <body class="bg-darker-green flex items-center justify-center text-slate-900 font-mono">
+
+    <div id="background-image" class="grid place-items-center h-screen align-middle">
+      <div id="text-body" class="rounded-xl backdrop-blur-sm p-8 grid gap-4 grid-flow-row md:grid-flow-col text-xs sm:text-sm md:text-lg lg:text-lg xl:text-3xl">
+        <div class="grid grid-flow-row gap-4">
+          <h1 id="title" class="font-extrabold italic text-dark-brown text-2xl xs:text-4xl sm:text-5xl md:text-5xl lg:text-5xl xl:text-6xl" contenteditable="true">🎄🎄 Merry Christmas! 🎄🎄</h1>
+          <p id="abovetext" class="text-center text-dark-brown text-lg md:text-xl lg:text-2xl xl:text-3xl">
+            
+            
+Yo! Merry Christmas! The past year has been a lot of fun because of you - from homeroom shenanigans to Team Inspiration. I also can't thank you more for 
+allowing me to join the team. It's been really fun, and I've learned at lot (and, albeit regretably, gained a worsened taste in music). Robosub is going to be 
+really cool, and I can't wait to have you lead our team to victory. 
+
+          </p>
+          <div class="items-start">
+            <p id="abovetext" class="text-right italic text-dark-brown text-lg md:text-xl lg:text-2xl xl:text-3xl">-Sean</p>
+            <div class="align-middle text-center"><button class="text-center align-middle bg-darker-green p-2 font-extrabold text-dark-brown italic text-lg md:text-lg lg:text-xl xl:text-2xl border-dashed hover:border-dotted border-4 border-dark-red" onclick="playInput()" id="">Click me!</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let jsConfetti = new JSConfetti();
+
+      function playConfetti(emojis) {
+        jsConfetti.addConfetti({
+          emojis: emojis,
+          emojiSize: 100,
+          confettiNumber: 30,
+          confettiColors: [
+            "#ff0a54",
+            "#ff477e",
+            "#ff7096",
+            "#ff85a1",
+            "#fbb1bd",
+            "#f9bec7",
+          ],
+        });
+      };
+
+      function playInput() {
+        input = document.getElementById("title").innerHTML;
+        if (input != "🎄🎄 Merry Christmas! 🎄🎄") {
+
+          let emojis = [];
+          let counter = 0;
+          let completeCharacter = "";
+          for (let x = 0; x < input.length; x++) {
+            completeCharacter += input.substring(x, x + 1);
+            if (x % 2 == 1) {
+              emojis[counter] = completeCharacter;
+              completeCharacter = "";
+              counter++;
+            }
+          }
+          console.log(emojis);
+          playConfetti(emojis);
+        }
+        else {
+          playConfetti(["🎄", "🎅🏼", "🎁"]);
+        }
+      }
+
+    </script>
+
+    <script>playInput(); console.log("stop poking around, you nerd!")</script>
+
+  </body>
+</html>
