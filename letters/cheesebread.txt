@@ -1,7 +1,0 @@
----
-music: /music/elf.mp3
----
-
-Merry Christmas Coach Jack! Thank you for the support you've given me (and the team) throughout the RobotX competition - it's really meant a lot. 
-You've provided a wealth of knowledge alongside your vast, seemingly endless, pantry of tools and parts. Of course, your jokes and cheese bread 
-make it even better! Thank you so much, and I'm excited to tackle the Robosub competition with you as a mentor again!
