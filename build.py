@@ -35,7 +35,7 @@ def main():
       if keyword == "text_body":
         continue
       try:
-        layout_body =layout_body.replace("{{" + keyword + "}}", metadata[keyword])
+        layout_body = layout_body.replace("{{" + keyword + "}}", metadata[keyword])
       except:
         print(f"Error in building file \"{letter}\"")
 
